@@ -1,9 +1,16 @@
 {
-  "name":"SIGNATURE FRAGRANCE — Toronto Decants",
-  "short_name":"SIGNATURE FRAGRANCE",
-  "start_url":"./",
-  "display":"standalone",
-  "background_color":"#10100f",
-  "theme_color":"#10100f",
-  "icons":[{"src":"assets/icon.svg","sizes":"any","type":"image/svg+xml","purpose":"any maskable"}]
+  "name": "Signature Fragrance \u2014 Toronto Decants",
+  "short_name": "Signature Fragrance",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#0d0c0b",
+  "theme_color": "#0d0c0b",
+  "icons": [
+    {
+      "src": "assets/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
 }
