@@ -110,4 +110,184 @@
   .product-photo,.modal-art .product-photo{padding:14px 16px!important}
 }
 
+/* =========================================================
+   v6.6 — BORDERLESS PACKSHOT / CUTOUT PRESENTATION
+   White packshot canvases visually disappear into the shared
+   product stage. No blur, contrast or mask tricks are used.
+   ========================================================= */
+.product-art,
+.modal-art{
+  background:
+    radial-gradient(circle at 50% 36%,#faf7f1 0 34%,#f2ebe2 67%,#e3d7c8 100%)!important;
+  isolation:isolate;
+}
+.product-art:after,
+.modal-art:after{
+  background:radial-gradient(ellipse at 50% 48%,transparent 56%,rgba(95,73,48,.035) 78%,rgba(58,42,27,.07) 100%)!important;
+  box-shadow:inset 0 -24px 42px rgba(79,57,36,.035)!important;
+}
+.product-photo,
+.modal-art .product-photo{
+  mix-blend-mode:multiply!important;
+  filter:none!important;
+  -webkit-mask-image:none!important;
+  mask-image:none!important;
+  background:transparent!important;
+  object-fit:contain!important;
+  object-position:center center!important;
+  image-rendering:auto!important;
+  will-change:transform;
+}
+.product-art .product-photo{
+  padding:14px 18px 10px!important;
+  transform:scale(1.025)!important;
+}
+.product-art:hover .product-photo{
+  transform:scale(1.055)!important;
+  filter:none!important;
+}
+.modal-art .product-photo{
+  padding:24px 34px 18px!important;
+  transform:scale(1.015)!important;
+}
+
+/* One continuous hero stage: no individual image cards. */
+.hero-visual{isolation:isolate}
+.hero-stage{
+  position:absolute!important;
+  inset:3% -2% 0 0!important;
+  border:1px solid rgba(216,189,136,.14)!important;
+  border-radius:46% 54% 42% 58% / 48% 44% 56% 52%!important;
+  background:
+    radial-gradient(circle at 47% 34%,#fbf8f2 0 28%,#f3ece2 52%,#e3d5c2 78%,rgba(202,174,132,.16) 100%)!important;
+  box-shadow:0 38px 90px rgba(0,0,0,.22),inset 0 1px 0 rgba(255,255,255,.6)!important;
+  z-index:0;
+}
+.hero-bottle{
+  z-index:2!important;
+  border:0!important;
+  background:transparent!important;
+  box-shadow:none!important;
+  border-radius:0!important;
+  overflow:visible!important;
+  isolation:auto!important;
+}
+.hero-bottle:after{display:none!important}
+.hero-bottle:before{
+  left:17%!important;
+  right:17%!important;
+  bottom:3%!important;
+  height:7%!important;
+  background:rgba(53,39,25,.18)!important;
+  filter:blur(13px)!important;
+}
+.hero-bottle img{
+  width:100%!important;
+  height:100%!important;
+  padding:0!important;
+  object-fit:contain!important;
+  object-position:center bottom!important;
+  background:transparent!important;
+  mix-blend-mode:multiply!important;
+  filter:none!important;
+  -webkit-mask-image:none!important;
+  mask-image:none!important;
+}
+.hero-caption{z-index:4!important}
+
+/* Keep visual rhythm consistent on small screens. */
+@media(max-width:800px){
+  .product-art .product-photo{padding:10px 12px 8px!important}
+  .modal-art .product-photo{padding:15px 18px 12px!important}
+  .hero-stage{inset:7% 0 2% 0!important;border-radius:38px!important}
+}
+
+/* =========================================================
+   v7.0 — PACKSHOT RESCUE / BORDERLESS PRODUCT STAGE
+   Goal: source photography reads as the bottle itself, not a
+   pasted retailer rectangle. White source canvases optically
+   vanish into one seamless editorial stage.
+   ========================================================= */
+.product-art,
+.modal-art{
+  border:0!important;
+  background:
+    radial-gradient(ellipse at 50% 42%, #fbf8f2 0 34%, #f2eadf 65%, #e6d8c5 100%)!important;
+  box-shadow:inset 0 -1px 0 rgba(92,67,42,.08)!important;
+  isolation:isolate!important;
+}
+.product-art:before,
+.modal-art:before{
+  content:'';
+  position:absolute;
+  z-index:0;
+  left:25%;right:25%;bottom:7%;height:7%;
+  border-radius:50%;
+  background:rgba(54,38,23,.16)!important;
+  filter:blur(12px)!important;
+}
+.product-art:after,
+.modal-art:after{
+  content:'';
+  position:absolute;
+  z-index:2;
+  inset:0;
+  pointer-events:none;
+  background:linear-gradient(to bottom,rgba(255,255,255,.08),transparent 26%,transparent 78%,rgba(87,63,39,.035))!important;
+  box-shadow:none!important;
+}
+.product-photo,
+.modal-art .product-photo{
+  z-index:1!important;
+  background:transparent!important;
+  object-fit:contain!important;
+  object-position:center center!important;
+  mix-blend-mode:multiply!important;
+  filter:none!important;
+  -webkit-mask-image:none!important;
+  mask-image:none!important;
+  image-rendering:auto!important;
+  transform:scale(1.08)!important;
+  padding:5px 8px!important;
+  transition:none!important;
+}
+.product-art:hover .product-photo{transform:scale(1.08)!important;filter:none!important}
+.modal-art .product-photo{transform:scale(1.06)!important;padding:14px 22px!important}
+
+/* Optical normalization for packshots with unusually large source margins. */
+.product-art[data-product="2"] .product-photo,.modal-art[data-product="2"] .product-photo{transform:scale(1.10)!important}
+.product-art[data-product="3"] .product-photo,.modal-art[data-product="3"] .product-photo{transform:scale(1.10)!important}
+.product-art[data-product="6"] .product-photo,.modal-art[data-product="6"] .product-photo{transform:scale(1.12)!important}
+.product-art[data-product="9"] .product-photo,.modal-art[data-product="9"] .product-photo{transform:scale(1.27)!important}
+.product-art[data-product="14"] .product-photo,.modal-art[data-product="14"] .product-photo{transform:scale(1.30)!important}
+.product-art[data-product="17"] .product-photo,.modal-art[data-product="17"] .product-photo{transform:scale(1.16)!important}
+.product-art[data-product="18"] .product-photo,.modal-art[data-product="18"] .product-photo{transform:scale(1.12)!important}
+.product-art[data-product="28"] .product-photo,.modal-art[data-product="28"] .product-photo{transform:scale(1.14)!important}
+
+/* Hero: one continuous studio stage, no image-card framing. */
+.hero-stage{
+  border:0!important;
+  background:
+    radial-gradient(circle at 47% 35%,#fbf8f2 0 29%,#f1e8dc 55%,#dfcfb9 79%,rgba(196,163,119,.12) 100%)!important;
+  box-shadow:0 34px 80px rgba(0,0,0,.18)!important;
+}
+.hero-bottle{border:0!important;background:transparent!important;box-shadow:none!important;overflow:visible!important}
+.hero-bottle img{
+  mix-blend-mode:multiply!important;
+  filter:none!important;
+  -webkit-mask-image:none!important;
+  mask-image:none!important;
+  background:transparent!important;
+  object-fit:contain!important;
+  object-position:center bottom!important;
+  padding:0!important;
+}
+.hero-bottle.image-missing{display:none!important}
+
+@media(max-width:800px){
+  .product-photo,.modal-art .product-photo{padding:4px 5px!important}
+  .product-art[data-product="9"] .product-photo,.modal-art[data-product="9"] .product-photo{transform:scale(1.22)!important}
+  .product-art[data-product="14"] .product-photo,.modal-art[data-product="14"] .product-photo{transform:scale(1.24)!important}
+}
+
 [hidden]{display:none!important}
