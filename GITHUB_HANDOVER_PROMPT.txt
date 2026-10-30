@@ -1,0 +1,105 @@
+You are the EXECUTION agent for the Signature Fragrance GitHub showcase prototype.
+
+This is a deployment/execution task, NOT permission to redesign the store or reinterpret the commercial model.
+
+PROJECT
+Signature Fragrance is a Toronto/GTA fragrance-decant storefront prototype. Shopify is intended to become the production commerce store later. For now, GitHub Pages is only the public showcase version I want to share with friends and reviewers.
+
+APPROVED BUILD
+Use the supplied file:
+SIGNATURE_FRAGRANCE_GITHUB_SHOWCASE.zip
+
+The ZIP contains the approved static build, including index.html, app.js, styles.css, manifest/service-worker files, .nojekyll, pricing/research files, a Shopify draft import CSV and migration notes.
+
+PRIMARY OBJECTIVE
+Deploy the supplied approved build to GitHub Pages so I can share the public URL.
+
+REPOSITORY RULES
+- If I provide an existing Signature Fragrance repository, UPDATE THAT REPOSITORY IN PLACE.
+- Do not create duplicate repositories such as signature-fragrance-v2, signature-fragrance-new, signature-fragrance-final, signature-fragrance-update, etc.
+- Create a new repository only if there genuinely is no existing repository intended for this prototype.
+- Default branch: main.
+- Do not change repository visibility unless I explicitly approve it.
+- If a public GitHub Pages URL requires the repository/site to be public under my current GitHub plan, explain that constraint before changing visibility.
+
+DEPLOYMENT RULES
+1. Extract the ZIP.
+2. Upload the CONTENTS of the ZIP directly to the repository root on main.
+3. Do NOT upload the ZIP itself as the website.
+4. Do NOT nest the site inside another folder.
+5. The repository root should contain index.html, app.js, styles.css, .nojekyll, manifest.webmanifest, service-worker.js, assets/, and the included documentation/CSV files.
+6. Configure GitHub Pages from main / (root), preserving an existing working Pages setup where possible.
+7. If the repository already has the site, replace/update the approved build files in place rather than creating a new repo.
+
+APPROVED PRODUCT / UX SCOPE — DO NOT REDESIGN
+Brand: Signature Fragrance.
+Market positioning: Toronto/GTA fragrance decants, medium-to-high margin, curated rather than bargain-basement.
+Catalog: the supplied 28-fragrance launch wardrobe.
+Decant sizes: 2 mL, 5 mL and 10 mL where configured.
+No sign-in/account wall.
+Guest-first shopping flow.
+Features include:
+- catalog search/filtering;
+- product detail modals;
+- local shopping bag;
+- monthly subscription-box prototype;
+- Toronto Flight 5 × 2 mL builder;
+- GTA pickup/local-delivery prototype;
+- order review with estimated HST;
+- policy/FAQ content;
+- Shopify migration planning files.
+
+PAYMENT BOUNDARY
+This GitHub version MUST remain non-transactional.
+The flow intentionally ends at "Proceed to payment" / the payment handoff screen.
+Do not add credit-card fields, API keys, Stripe secrets, Shopify credentials, a fake payment processor, or any mechanism that transmits customer/payment data.
+The eventual live store will use Shopify for payment, taxes, inventory, fulfillment and recurring billing.
+
+WHAT YOU MAY FIX
+Only fix genuine deployment/runtime defects, including:
+- broken asset paths;
+- GitHub Pages base-path issues;
+- JavaScript errors;
+- mobile layout defects that prevent use;
+- service-worker caching problems;
+- broken buttons/modals;
+- deployment configuration errors.
+
+WHAT YOU MAY NOT CHANGE WITHOUT APPROVAL
+- brand name;
+- prices or subscription economics;
+- catalog membership;
+- product tier assignments;
+- visual direction;
+- copy/positioning in a material way;
+- checkout boundary;
+- recommendation/commercial logic;
+- repository identity or visibility.
+
+VALIDATION AFTER DEPLOYMENT
+Open the published GitHub Pages URL and verify at minimum:
+1. Home page loads with Signature Fragrance branding.
+2. All 28 products render.
+3. Search and filters work.
+4. Product Details opens.
+5. Decants can be added to the bag.
+6. Subscription plan selection/building works.
+7. Toronto Flight builder works.
+8. Bag subtotal works.
+9. Guest checkout advances Contact → Fulfillment → Review → Payment handoff.
+10. GTA delivery fields appear only when delivery is selected.
+11. Order-review arithmetic renders.
+12. Proceed to payment stops at the prototype boundary and does not collect payment.
+13. Policy footer links work.
+14. Mobile layout is usable.
+15. Direct/reloaded GitHub Pages paths do not break the site.
+
+REPORT BACK
+When finished, give me:
+- repository URL;
+- published GitHub Pages URL;
+- branch deployed;
+- whether the build was deployed unchanged or which genuine technical fixes were necessary;
+- the validation result for the checks above.
+
+Do not create a second repository just because deployment needs troubleshooting. Fix the existing deployment in place wherever possible.

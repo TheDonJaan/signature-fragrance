@@ -1,0 +1,9 @@
+{
+  "name":"SIGNATURE FRAGRANCE — Toronto Decants",
+  "short_name":"SIGNATURE FRAGRANCE",
+  "start_url":"./",
+  "display":"standalone",
+  "background_color":"#10100f",
+  "theme_color":"#10100f",
+  "icons":[{"src":"assets/icon.svg","sizes":"any","type":"image/svg+xml","purpose":"any maskable"}]
+}

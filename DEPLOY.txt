@@ -1,0 +1,11 @@
+SIGNATURE FRAGRANCE — GITHUB PAGES SHOWCASE DEPLOY
+
+1. Use the existing intended GitHub repository, or create one only if none exists.
+2. Upload the CONTENTS of this folder to the ROOT of main.
+3. Do NOT upload the ZIP as the deployed site.
+4. Do NOT nest the files inside a second folder.
+5. GitHub > Settings > Pages > Deploy from a branch > main > /(root).
+6. Verify the published URL on desktop and mobile.
+7. Test: product details, 2/5/10 mL add-to-bag, subscription builder, Toronto Flight, cart, guest checkout, fulfillment toggle, review totals, Proceed to payment stop, policy links.
+
+This is deliberately non-transactional. No payment or customer data is transmitted.
